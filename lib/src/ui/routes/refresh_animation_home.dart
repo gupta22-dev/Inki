@@ -532,6 +532,7 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                                 });
                                                               });
                                                               //set timer of 3 secs
+                                                              // 5 Mins
                                                             });
                                                           },
                                                     child: FragnanceRipple(

@@ -57,8 +57,8 @@ class _FragnanceRippleState extends State<FragnanceRipple>
         child: AnimatedBuilder(
           animation: rippleAnimation,
           builder: (context, child) => Container(
-            width: rippleAnimation.value * 0.6,
-            height: rippleAnimation.value * 0.6,
+            width: rippleAnimation.value * 0.8,
+            height: rippleAnimation.value * 0.8,
             child: Container(
               decoration: BoxDecoration(
                   shape: BoxShape.circle, color: widget.color.withOpacity(0.4)),
