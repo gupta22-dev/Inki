@@ -37,7 +37,7 @@ class _FragnanceRippleState extends State<FragnanceRipple>
             }
           });
     scaleAnimation =
-        Tween<double>(begin: 1.0, end: 90.0).animate(scaleController);
+        Tween<double>(begin: 0.0, end: 120.0).animate(scaleController);
     rippleController.forward();
   }
 
@@ -50,9 +50,6 @@ class _FragnanceRippleState extends State<FragnanceRipple>
 
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), () {
-      widget.fun();
-    });
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Align(
@@ -60,25 +57,33 @@ class _FragnanceRippleState extends State<FragnanceRipple>
         child: AnimatedBuilder(
           animation: rippleAnimation,
           builder: (context, child) => Container(
-            width: rippleAnimation.value * 0.6,
-            height: rippleAnimation.value * 0.6,
+            width: rippleAnimation.value * 0.8,
+            height: rippleAnimation.value * 0.8,
             child: Container(
               decoration: BoxDecoration(
                   shape: BoxShape.circle, color: widget.color.withOpacity(0.4)),
               child: InkWell(
                 onTap: () {
                   scaleController.forward();
+                  Timer(Duration(seconds: 3), () {
+                    widget.fun();
+                  });
+                  Timer(Duration(seconds: 4), () {
+                    scaleController.reverse();
+                  });
                 },
                 child: AnimatedBuilder(
                     animation: scaleAnimation,
-                    builder: (context, child) => Transform.scale(
-                          scale: scaleAnimation.value,
-                          child: Container(
-                              margin: EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: widget.color.withOpacity(1.0))),
-                        )),
+                    builder: (context, child) {
+                      return Transform.scale(
+                        scale: scaleAnimation.value,
+                        child: Container(
+                            margin: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: widget.color.withOpacity(1.0))),
+                      );
+                    }),
               ),
             ),
           ),
