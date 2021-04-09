@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230.758" height="230.756" viewBox="0 0 230.758 230.756">
+    <g>
+        <path fill="#f0f0f0" stroke="#c3c8cd" stroke-miterlimit="10" stroke-width="0.548px" d="M468.514 605.178a115.1 115.1 0 1 1-115.1-115.1 115.1 115.1 0 0 1 115.1 115.1z" transform="translate(-407.864 -1344.957) translate(169.833 855.157)"/>
+        <text fill="#58595b" font-family="PFAgoraSansPro-BlackItalic, PF Agora Sans Pro" font-size="20px" font-style="italic" font-weight="800" letter-spacing="0.03em" transform="translate(-407.864 -1344.957) translate(437.561 1441.231)">
+            <tspan x="38.886" y="19">Avoid any</tspan><tspan x="31.336" y="41">dust / germ </tspan><tspan x="45.276" y="63">allergies</tspan>
+        </text>
+        <path fill="#f0f0f0" stroke="#58595b" stroke-miterlimit="10" stroke-width="2px" d="M310.925 513.894a10.3 10.3 0 0 0-8.728 4.82 10.295 10.295 0 0 0-19.008 5.428 10.76 10.76 0 0 0 1.733 5.7c2.159 3.482 16.118 18.172 16.728 18.8a.763.763 0 0 0 1.074.02l.02-.02c.594-.626 14.553-15.313 16.726-18.8a10.743 10.743 0 0 0 1.735-5.7 10.281 10.281 0 0 0-10.28-10.248z" transform="translate(-407.864 -1344.957) translate(225.58 884.742)"/>
+    </g>
+</svg>

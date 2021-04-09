@@ -1,0 +1,13 @@
+const String mainHome = '/mainHome';
+const String mainCategoriesScreen = "/mainCategories";
+const String subCategories = "/subCategories";
+const String subCategoriesProducts = "/subCategoriesProducts";
+const String productsDetails = "/productsDetails";
+const String refreshAnimationHome = "/RefreshAnimationHome";
+const String refreshAnimationDetailsHome = "/refreshAnimationDetails";
+const String moreOptionsScreen = "/moreOptionsScreen";
+const String deviceRegisterScreen = "/deviceRegisterScreen";
+const String laundryMagicScreen = "/laundryMagicScreen";
+const String videoApp = "/VideoApp";
+const String webView = "/WebViewExample";
+const String iotScreen = "/IotScreen";
