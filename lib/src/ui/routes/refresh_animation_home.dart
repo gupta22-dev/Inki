@@ -357,7 +357,7 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           mainAxisAlignment:
-                                              MainAxisAlignment.center,
+                                              MainAxisAlignment.spaceEvenly,
                                           children: [
                                             Container(
                                               width: 150,
