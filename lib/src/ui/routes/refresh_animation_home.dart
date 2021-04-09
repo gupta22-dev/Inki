@@ -240,9 +240,9 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                               // set timer of 3secs...set is clicked back to false//
                                                             });
 
-                                                            navigateToDetailAnimation(
+                                                            /* navigateToDetailAnimation(
                                                                 "a",
-                                                                iotViewModel);
+                                                                iotViewModel); */
                                                           },
                                                     child: FragnanceRipple(
                                                       color: yellowColor[0],
