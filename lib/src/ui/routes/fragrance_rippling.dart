@@ -68,6 +68,9 @@ class _FragnanceRippleState extends State<FragnanceRipple>
                   Timer(Duration(seconds: 3), () {
                     widget.fun();
                   });
+                  Timer(Duration(seconds: 4), () {
+                    scaleController.reverse();
+                  });
                 },
                 child: AnimatedBuilder(
                     animation: scaleAnimation,
