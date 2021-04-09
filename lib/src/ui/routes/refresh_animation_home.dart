@@ -151,7 +151,6 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                         TextAlign.center),
                                           ),
                                         ),
-
                                         verticalSizedBox(),
                                         Row(
                                           crossAxisAlignment:
@@ -548,73 +547,88 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                             ),
                                           ],
                                         ),
-
-                                        verticalSizedBox(),
-                                        // Not just FRAGNANCE FRESH
-                                        Text("Not just FRAGNANCE FRESH",
-                                            style: GoogleFonts.roboto(
-                                              textStyle: TextStyle(
-                                                  color:
-                                                      const Color(0xff303030),
-                                                  fontWeight: FontWeight.w400,
-                                                  fontFamily: "Roboto",
-                                                  fontStyle: FontStyle.normal,
-                                                  fontSize: 18.0),
+                                        verticalSizedBoxTwenty(),
+                                        Wrap(
+                                          children: [
+                                            verticalSizedBoxTwenty(),
+                                            // Not just FRAGNANCE FRESH
+                                            Center(
+                                              child: Text(
+                                                  "Not just FRAGNANCE FRESH",
+                                                  style: GoogleFonts.roboto(
+                                                    textStyle: TextStyle(
+                                                        color: const Color(
+                                                            0xff303030),
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        fontFamily: "Roboto",
+                                                        fontStyle:
+                                                            FontStyle.normal,
+                                                        fontSize: 18.0),
+                                                  ),
+                                                  textAlign: TextAlign.center),
                                             ),
-                                            textAlign: TextAlign.center),
-                                        verticalSizedBoxTwenty(),
-                                        Center(
-                                          child: // but now get  your laundry
-                                              Text(
-                                                  "but now get your \n laundry",
-                                                  style: GoogleFonts.roboto(
-                                                    textStyle: TextStyle(
-                                                        color: const Color(
-                                                            0xff959595),
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontFamily: "Roboto",
-                                                        fontStyle:
-                                                            FontStyle.normal,
-                                                        fontSize: 30.0),
-                                                  ),
-                                                  textAlign: TextAlign.center),
+                                            verticalSizedBoxTwenty(),
+                                            Center(
+                                              child: // but now get  your laundry
+                                                  Text(
+                                                      "but now get your \n laundry",
+                                                      style: GoogleFonts.roboto(
+                                                        textStyle: TextStyle(
+                                                            color: const Color(
+                                                                0xff959595),
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                "Roboto",
+                                                            fontStyle: FontStyle
+                                                                .normal,
+                                                            fontSize: 30.0),
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center),
+                                            ),
+                                            verticalSizedBox(),
+                                            Center(
+                                              child: // refreshed
+                                                  Text("refreshed",
+                                                      style: GoogleFonts.roboto(
+                                                        textStyle: TextStyle(
+                                                            color: const Color(
+                                                                0xff171717),
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                "Roboto",
+                                                            fontStyle: FontStyle
+                                                                .normal,
+                                                            fontSize: 53.5),
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center),
+                                            ),
+                                            verticalSizedBox(),
+                                            Center(
+                                              child: // with steam !
+                                                  Text("with steam !",
+                                                      style: GoogleFonts.roboto(
+                                                        textStyle: TextStyle(
+                                                            color: const Color(
+                                                                0xff959595),
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                "Roboto",
+                                                            fontStyle: FontStyle
+                                                                .normal,
+                                                            fontSize: 30.0),
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center),
+                                            ),
+                                            verticalSizedBoxTwenty(),
+                                          ],
                                         ),
-                                        verticalSizedBox(),
-                                        Center(
-                                          child: // refreshed
-                                              Text("refreshed",
-                                                  style: GoogleFonts.roboto(
-                                                    textStyle: TextStyle(
-                                                        color: const Color(
-                                                            0xff171717),
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontFamily: "Roboto",
-                                                        fontStyle:
-                                                            FontStyle.normal,
-                                                        fontSize: 53.5),
-                                                  ),
-                                                  textAlign: TextAlign.center),
-                                        ),
-                                        verticalSizedBox(),
-                                        Center(
-                                          child: // with steam !
-                                              Text("with steam !",
-                                                  style: GoogleFonts.roboto(
-                                                    textStyle: TextStyle(
-                                                        color: const Color(
-                                                            0xff959595),
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontFamily: "Roboto",
-                                                        fontStyle:
-                                                            FontStyle.normal,
-                                                        fontSize: 30.0),
-                                                  ),
-                                                  textAlign: TextAlign.center),
-                                        ),
-                                        verticalSizedBoxTwenty(),
                                       ],
                                     ),
                                   ),
