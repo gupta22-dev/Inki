@@ -65,10 +65,10 @@ class _FragnanceRippleState extends State<FragnanceRipple>
               child: InkWell(
                 onTap: () {
                   scaleController.forward();
-                  Timer(Duration(seconds: 3), () {
+                  Timer(Duration(seconds: 0), () {
                     widget.fun();
                   });
-                  Timer(Duration(seconds: 4), () {
+                  Timer(Duration(seconds: 2), () {
                     scaleController.reverse();
                   });
                 },
