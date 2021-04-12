@@ -192,7 +192,7 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                                           0,
                                                                           18),
                                                               /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                              blurRadius:
+                                                              blurRadius: /*Icon pressed effect*/
                                                                   (isClicked ==
                                                                           true)
                                                                       ? 100
@@ -210,13 +210,14 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                         ),
                                                       ),
                                                       child: Image.asset(
-                                                        "assets/images/lemon.png",
+                                                        "assets/images/lemon.png", /*Icon*/
                                                       ),
                                                     ),
                                                   ),
                                                   GestureDetector(
-                                                    behavior: HitTestBehavior
-                                                        .translucent,
+                                                    behavior:
+                                                        HitTestBehavior /*Screen animation with colour changing*/
+                                                            .translucent,
                                                     onTap: orangeAnim == true ||
                                                             blueAnim == true ||
                                                             whiteAnim == true
@@ -292,7 +293,7 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                                           0,
                                                                           18),
                                                               /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                              blurRadius:
+                                                              blurRadius: /*Icon pressed effect*/
                                                                   (isClicked ==
                                                                           true)
                                                                       ? 100
@@ -310,11 +311,12 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                         ),
                                                       ),
                                                       child: Image.asset(
-                                                        "assets/images/orange.png",
+                                                        "assets/images/orange.png", /*Icon*/
                                                       ),
                                                     ),
                                                   ),
                                                   GestureDetector(
+                                                    /*Screen animation with colour changing*/
                                                     onTap: yellowAnim == true ||
                                                             blueAnim == true ||
                                                             whiteAnim == true
@@ -392,7 +394,7 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                                           0,
                                                                           18),
                                                               /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                              blurRadius:
+                                                              blurRadius: /*Icon pressed effect*/
                                                                   (isClicked ==
                                                                           true)
                                                                       ? 100
@@ -410,11 +412,12 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                         ),
                                                       ),
                                                       child: Image.asset(
-                                                        "assets/images/water.png",
+                                                        "assets/images/water.png", /*Icon*/
                                                       ),
                                                     ),
                                                   ),
                                                   GestureDetector(
+                                                    /*Screen animation with colour changing*/
                                                     onTap: yellowAnim == true ||
                                                             whiteAnim == true ||
                                                             orangeAnim == true
@@ -485,7 +488,7 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                                           18),
 
                                                               /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                              blurRadius:
+                                                              blurRadius: /*Icon pressed effect*/
                                                                   (isClicked ==
                                                                           true)
                                                                       ? 100
@@ -503,11 +506,12 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                                                         ),
                                                       ),
                                                       child: Image.asset(
-                                                        "assets/images/flower.png",
+                                                        "assets/images/flower.png", /*Icon*/
                                                       ),
                                                     ),
                                                   ),
                                                   GestureDetector(
+                                                    /*Screen animation with colour changing*/
                                                     onTap: yellowAnim == true ||
                                                             blueAnim == true ||
                                                             orangeAnim == true

@@ -26,6 +26,7 @@ class _FragnanceRippleState extends State<FragnanceRipple>
         AnimationController(vsync: this, duration: Duration(seconds: 1));
     scaleController =
         AnimationController(vsync: this, duration: Duration(seconds: 1));
+    /*Animation*/
 
     rippleAnimation =
         Tween<double>(begin: 80.0, end: 90.0).animate(rippleController)
@@ -66,10 +67,12 @@ class _FragnanceRippleState extends State<FragnanceRipple>
                 onTap: () {
                   scaleController.forward();
                   Timer(Duration(seconds: 0), () {
+                    /*ripple animation speed after clicked*/
                     widget.fun();
                   });
                   Timer(Duration(seconds: 2), () {
-                    scaleController.reverse();
+                    scaleController
+                        .reverse(); /* Reverse ripple animation after navigating to next page*/
                   });
                 },
                 child: AnimatedBuilder(
@@ -80,6 +83,7 @@ class _FragnanceRippleState extends State<FragnanceRipple>
                         child: Container(
                             margin: EdgeInsets.all(10),
                             decoration: BoxDecoration(
+                                /*Ripple Animation shape*/
                                 shape: BoxShape.circle,
                                 color: widget.color.withOpacity(1.0))),
                       );
