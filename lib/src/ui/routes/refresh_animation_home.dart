@@ -88,528 +88,559 @@ class _RefreshAnimationHomeState extends State<RefreshAnimationHome>
                       ),
                       duration: Duration(seconds: 1),
                       child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            customAppBar(
-                                context: context,
-                                backgroundColor: Color(0xffffffff),
-                                onBackClicked: () {
-                                  // Navigator.pop(context);
-                                  navigateToHome(context: context);
-                                },
-                                menuOnClicked: () {
-                                  navigateToHome(context: context);
-                                }),
-                            Expanded(
-                              child: Container(
-                                child: Center(
-                                  child: ListView(
-                                    shrinkWrap: true,
-                                    children: <Widget>[
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      Container(
-                                        child: Center(
-                                          child: // Liked it !
-                                              Text("LIKED IT !",
-                                                  style: GoogleFonts.roboto(
-                                                    textStyle: TextStyle(
-                                                        color: const Color(
-                                                            0xff303030),
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontFamily: "Roboto",
-                                                        fontStyle:
-                                                            FontStyle.normal,
-                                                        fontSize: 30.0),
-                                                  ),
-                                                  textAlign: TextAlign.center),
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              customAppBar(
+                                  context: context,
+                                  backgroundColor: Color(0xffffffff),
+                                  onBackClicked: () {
+                                    // Navigator.pop(context);
+                                    navigateToHome(context: context);
+                                  },
+                                  menuOnClicked: () {
+                                    navigateToHome(context: context);
+                                  }),
+                              Expanded(
+                                child: Container(
+                                  child: Center(
+                                    child: ListView(
+                                      shrinkWrap: true,
+                                      children: <Widget>[
+                                        SizedBox(
+                                          height: 10,
                                         ),
-                                      ),
-                                      verticalSizedBox(),
-                                      Container(
-                                        child: Center(
-                                          child: // Let's try some more  fragrance options
-                                              Text(
-                                                  "Let's try some more \n fragrance options ",
-                                                  style: GoogleFonts.roboto(
-                                                    textStyle: TextStyle(
-                                                        color: const Color(
-                                                            0xff303030),
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontFamily: "Roboto",
-                                                        fontStyle:
-                                                            FontStyle.normal,
-                                                        fontSize: 20.0),
-                                                  ),
-                                                  textAlign: TextAlign.center),
+                                        Container(
+                                          child: Center(
+                                            child: // Liked it !
+                                                Text("LIKED IT !",
+                                                    style: GoogleFonts.roboto(
+                                                      textStyle: TextStyle(
+                                                          color: const Color(
+                                                              0xff303030),
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontFamily: "Roboto",
+                                                          fontStyle:
+                                                              FontStyle.normal,
+                                                          fontSize: 30.0),
+                                                    ),
+                                                    textAlign:
+                                                        TextAlign.center),
+                                          ),
                                         ),
-                                      ),
-                                      verticalSizedBox(),
-                                      Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Container(
-                                            height: 150,
-                                            width: 150,
-                                            child: Stack(
-                                              //fit: StackFit.passthrough,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      20.0),
-                                                  child: AnimatedContainer(
-                                                    duration:
-                                                        Duration(seconds: 0),
-                                                    width: 130,
-                                                    height: 130,
-                                                    decoration: BoxDecoration(
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                            color: (isClicked ==
-                                                                    true)
-                                                                ? Color(
-                                                                    0xfffce400)
-                                                                : Color(
-                                                                    0x29000000),
-                                                            offset:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? Offset(
-                                                                        0, 0)
-                                                                    : Offset(
-                                                                        0, 18),
-                                                            /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                            blurRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 100
-                                                                    : 27,
-                                                            spreadRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 350
-                                                                    : 0)
-                                                      ],
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                        500,
-                                                      ),
-                                                    ),
-                                                    child: Image.asset(
-                                                      "assets/images/lemon.png",
-                                                    ),
-                                                  ),
-                                                ),
-                                                GestureDetector(
-                                                  behavior: HitTestBehavior
-                                                      .translucent,
-                                                  onTap: orangeAnim == true ||
-                                                          blueAnim == true ||
-                                                          whiteAnim == true
-                                                      ? null
-                                                      : () {
-                                                          setState(() {
-                                                            yellowAnim = true;
-                                                            //screenBackground = yellow;
-                                                            screenBackground =
-                                                                yellowGradient;
-                                                            isClicked = false;
-                                                            Timer(
-                                                                Duration(
-                                                                    seconds: 3),
-                                                                () {
-                                                              setState(() {
-                                                                screenBackground =
-                                                                    normalGradient;
-                                                                isClicked =
-                                                                    false;
-                                                              });
-                                                            });
-
-                                                            // set timer of 3secs...set is clicked back to false//
-                                                          });
-
-                                                          /* navigateToDetailAnimation(
-                                                              "a",
-                                                              iotViewModel); */
-                                                        },
-                                                  child: FragnanceRipple(
-                                                    color: yellowColor[0],
-                                                    fun: () =>
-                                                        navigateToDetailAnimation(
-                                                            "a", iotViewModel),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          //horizontalSizedBoxTwenty(),
-                                          Container(
-                                            width: 150,
-                                            height: 150,
-                                            child: Stack(
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      20.0),
-                                                  child: AnimatedContainer(
-                                                    duration:
-                                                        Duration(seconds: 0),
-                                                    width: 130,
-                                                    height: 130,
-                                                    decoration: BoxDecoration(
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                            color: (isClicked ==
-                                                                    true)
-                                                                ? Color(
-                                                                    0xfff59006)
-                                                                : Color(
-                                                                    0x29000000),
-                                                            offset:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? Offset(
-                                                                        0, 0)
-                                                                    : Offset(
-                                                                        0, 18),
-                                                            /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                            blurRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 100
-                                                                    : 27,
-                                                            spreadRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 350
-                                                                    : 0)
-                                                      ],
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                        500,
-                                                      ),
-                                                    ),
-                                                    child: Image.asset(
-                                                      "assets/images/orange.png",
-                                                    ),
-                                                  ),
-                                                ),
-                                                GestureDetector(
-                                                  onTap: yellowAnim == true ||
-                                                          blueAnim == true ||
-                                                          whiteAnim == true
-                                                      ? null
-                                                      : () {
-                                                          setState(() {
-                                                            orangeAnim = true;
-                                                            //screenBackground = white;
-                                                            screenBackground =
-                                                                orangeGradient;
-                                                            isClicked = false;
-                                                            Timer(
-                                                                Duration(
-                                                                    seconds: 3),
-                                                                () {
-                                                              setState(() {
-                                                                screenBackground =
-                                                                    normalGradient;
-                                                                isClicked =
-                                                                    false;
-                                                              });
-                                                            });
-                                                            // Set a timer of 3 secs..... set isClicked back to false
-                                                          });
-                                                        },
-                                                  child: FragnanceRipple(
-                                                    color: orangeColor[0],
-                                                    fun: () =>
-                                                        navigateToDetailAnimation(
-                                                            "b", iotViewModel),
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Container(
-                                            width: 150,
-                                            height: 150,
-                                            child: Stack(
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      20.0),
-                                                  child: AnimatedContainer(
-                                                    duration:
-                                                        Duration(seconds: 0),
-                                                    width: 130,
-                                                    height: 130,
-                                                    decoration: BoxDecoration(
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                            color: (isClicked ==
-                                                                    true)
-                                                                ? Color(
-                                                                    0xff65CBE3)
-                                                                : Color(
-                                                                    0x29000000),
-                                                            offset:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? Offset(
-                                                                        0, 0)
-                                                                    : Offset(
-                                                                        0, 18),
-                                                            /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                            blurRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 100
-                                                                    : 27,
-                                                            spreadRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 350
-                                                                    : 0)
-                                                      ],
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                        500,
-                                                      ),
-                                                    ),
-                                                    child: Image.asset(
-                                                      "assets/images/water.png",
-                                                    ),
-                                                  ),
-                                                ),
-                                                GestureDetector(
-                                                  onTap: yellowAnim == true ||
-                                                          whiteAnim == true ||
-                                                          orangeAnim == true
-                                                      ? null
-                                                      : () {
-                                                          setState(() {
-                                                            blueAnim = true;
-                                                            // screenBackground = blue;
-                                                            screenBackground =
-                                                                blueGradient;
-                                                            isClicked = false;
-                                                            Timer(
-                                                                Duration(
-                                                                    seconds: 3),
-                                                                () {
-                                                              setState(() {
-                                                                screenBackground =
-                                                                    normalGradient;
-                                                                isClicked =
-                                                                    false;
-                                                              });
-                                                            });
-                                                            // Set a timer of 3 secs..... set isClicked back to false
-                                                          });
-                                                        },
-                                                  child: FragnanceRipple(
-                                                    color: blueColor[0],
-                                                    fun: () =>
-                                                        navigateToDetailAnimation(
-                                                            "c", iotViewModel),
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          Container(
-                                            width: 150,
-                                            height: 150,
-                                            child: Stack(
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      20.0),
-                                                  child: AnimatedContainer(
-                                                    duration:
-                                                        Duration(seconds: 0),
-                                                    width: 130,
-                                                    height: 130,
-                                                    decoration: BoxDecoration(
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                            color: (isClicked ==
-                                                                    true)
-                                                                ? Color(
-                                                                    0xffFFBBBB)
-                                                                : Color(
-                                                                    0x29000000),
-                                                            offset:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? Offset(
-                                                                        0, 0)
-                                                                    : Offset(
-                                                                        0, 18),
-
-                                                            /* (condition<t/f>) ? {true statements} : {false statements} */
-                                                            blurRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 100
-                                                                    : 27,
-                                                            spreadRadius:
-                                                                (isClicked ==
-                                                                        true)
-                                                                    ? 350
-                                                                    : 0)
-                                                      ],
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                        500,
-                                                      ),
-                                                    ),
-                                                    child: Image.asset(
-                                                      "assets/images/flower.png",
-                                                    ),
-                                                  ),
-                                                ),
-                                                GestureDetector(
-                                                  onTap: yellowAnim == true ||
-                                                          blueAnim == true ||
-                                                          orangeAnim == true
-                                                      ? null
-                                                      : () {
-                                                          setState(() {
-                                                            whiteAnim = true;
-                                                            //screenBackground = orange;
-                                                            screenBackground =
-                                                                roseGradient;
-                                                            isClicked = false;
-                                                            Timer(
-                                                                Duration(
-                                                                    seconds: 3),
-                                                                () {
-                                                              setState(() {
-                                                                screenBackground =
-                                                                    normalGradient;
-                                                                isClicked =
-                                                                    false;
-                                                              });
-                                                            });
-                                                            //set timer of 3 secs
-                                                            // 5 Mins
-                                                          });
-                                                        },
-                                                  child: FragnanceRipple(
-                                                    color: roseGradient[2],
-                                                    fun: () =>
-                                                        navigateToDetailAnimation(
-                                                            "d", iotViewModel),
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      verticalSizedBoxTwenty(),
-                                      Wrap(
-                                        children: [
-                                          verticalSizedBoxTwenty(),
-                                          // Not just FRAGNANCE FRESH
-                                          Center(
-                                            child: Text(
-                                                "Not just FRAGNANCE FRESH",
-                                                style: GoogleFonts.roboto(
-                                                  textStyle: TextStyle(
-                                                      color: const Color(
-                                                          0xff303030),
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      fontFamily: "Roboto",
-                                                      fontStyle:
-                                                          FontStyle.normal,
-                                                      fontSize: 18.0),
-                                                ),
-                                                textAlign: TextAlign.center),
-                                          ),
-                                          verticalSizedBoxTwenty(),
-                                          Center(
-                                            child: // but now get  your laundry
+                                        verticalSizedBox(),
+                                        Container(
+                                          child: Center(
+                                            child: // Let's try some more  fragrance options
                                                 Text(
-                                                    "but now get your \n laundry",
+                                                    "Let's try some more \n fragrance options ",
                                                     style: GoogleFonts.roboto(
                                                       textStyle: TextStyle(
                                                           color: const Color(
-                                                              0xff959595),
+                                                              0xff303030),
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           fontFamily: "Roboto",
                                                           fontStyle:
                                                               FontStyle.normal,
-                                                          fontSize: 30.0),
+                                                          fontSize: 20.0),
                                                     ),
                                                     textAlign:
                                                         TextAlign.center),
                                           ),
-                                          verticalSizedBox(),
-                                          Center(
-                                            child: // refreshed
-                                                Text("refreshed",
-                                                    style: GoogleFonts.roboto(
-                                                      textStyle: TextStyle(
-                                                          color: const Color(
-                                                              0xff171717),
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          fontFamily: "Roboto",
-                                                          fontStyle:
-                                                              FontStyle.normal,
-                                                          fontSize: 53.5),
+                                        ),
+                                        verticalSizedBox(),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Container(
+                                              height: 150,
+                                              width: 150,
+                                              child: Stack(
+                                                //fit: StackFit.passthrough,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            20.0),
+                                                    child: AnimatedContainer(
+                                                      duration:
+                                                          Duration(seconds: 0),
+                                                      width: 130,
+                                                      height: 130,
+                                                      decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                              color: (isClicked ==
+                                                                      true)
+                                                                  ? Color(
+                                                                      0xfffce400)
+                                                                  : Color(
+                                                                      0x29000000),
+                                                              offset:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? Offset(
+                                                                          0, 0)
+                                                                      : Offset(
+                                                                          0,
+                                                                          18),
+                                                              /* (condition<t/f>) ? {true statements} : {false statements} */
+                                                              blurRadius: /*Icon pressed effect*/
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 100
+                                                                      : 27,
+                                                              spreadRadius:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 350
+                                                                      : 0)
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                          500,
+                                                        ),
+                                                      ),
+                                                      child: Image.asset(
+                                                        "assets/images/lemon.png", /*Icon*/
+                                                      ),
                                                     ),
-                                                    textAlign:
-                                                        TextAlign.center),
-                                          ),
-                                          verticalSizedBox(),
-                                          Center(
-                                            child: // with steam !
-                                                Text("with steam !",
-                                                    style: GoogleFonts.roboto(
-                                                      textStyle: TextStyle(
-                                                          color: const Color(
-                                                              0xff959595),
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          fontFamily: "Roboto",
-                                                          fontStyle:
-                                                              FontStyle.normal,
-                                                          fontSize: 30.0),
+                                                  ),
+                                                  GestureDetector(
+                                                    behavior:
+                                                        HitTestBehavior /*Screen animation with colour changing*/
+                                                            .translucent,
+                                                    onTap: orangeAnim == true ||
+                                                            blueAnim == true ||
+                                                            whiteAnim == true
+                                                        ? null
+                                                        : () {
+                                                            setState(() {
+                                                              yellowAnim = true;
+                                                              //screenBackground = yellow;
+                                                              screenBackground =
+                                                                  yellowGradient;
+                                                              isClicked = false;
+                                                              Timer(
+                                                                  Duration(
+                                                                      seconds:
+                                                                          3),
+                                                                  () {
+                                                                setState(() {
+                                                                  screenBackground =
+                                                                      normalGradient;
+                                                                  isClicked =
+                                                                      false;
+                                                                });
+                                                              });
+
+                                                              // set timer of 3secs...set is clicked back to false//
+                                                            });
+
+                                                            /* navigateToDetailAnimation(
+                                                                "a",
+                                                                iotViewModel); */
+                                                          },
+                                                    child: FragnanceRipple(
+                                                      color: yellowColor[0],
+                                                      fun: () =>
+                                                          navigateToDetailAnimation(
+                                                              "a",
+                                                              iotViewModel),
                                                     ),
-                                                    textAlign:
-                                                        TextAlign.center),
-                                          ),
-                                          verticalSizedBoxTwenty(),
-                                        ],
-                                      ),
-                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            //horizontalSizedBoxTwenty(),
+                                            Container(
+                                              width: 150,
+                                              height: 150,
+                                              child: Stack(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            20.0),
+                                                    child: AnimatedContainer(
+                                                      duration:
+                                                          Duration(seconds: 0),
+                                                      width: 130,
+                                                      height: 130,
+                                                      decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                              color: (isClicked ==
+                                                                      true)
+                                                                  ? Color(
+                                                                      0xfff59006)
+                                                                  : Color(
+                                                                      0x29000000),
+                                                              offset:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? Offset(
+                                                                          0, 0)
+                                                                      : Offset(
+                                                                          0,
+                                                                          18),
+                                                              /* (condition<t/f>) ? {true statements} : {false statements} */
+                                                              blurRadius: /*Icon pressed effect*/
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 100
+                                                                      : 27,
+                                                              spreadRadius:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 350
+                                                                      : 0)
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                          500,
+                                                        ),
+                                                      ),
+                                                      child: Image.asset(
+                                                        "assets/images/orange.png", /*Icon*/
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  GestureDetector(
+                                                    /*Screen animation with colour changing*/
+                                                    onTap: yellowAnim == true ||
+                                                            blueAnim == true ||
+                                                            whiteAnim == true
+                                                        ? null
+                                                        : () {
+                                                            setState(() {
+                                                              orangeAnim = true;
+                                                              //screenBackground = white;
+                                                              screenBackground =
+                                                                  orangeGradient;
+                                                              isClicked = false;
+                                                              Timer(
+                                                                  Duration(
+                                                                      seconds:
+                                                                          3),
+                                                                  () {
+                                                                setState(() {
+                                                                  screenBackground =
+                                                                      normalGradient;
+                                                                  isClicked =
+                                                                      false;
+                                                                });
+                                                              });
+                                                              // Set a timer of 3 secs..... set isClicked back to false
+                                                            });
+                                                          },
+                                                    child: FragnanceRipple(
+                                                      color: orangeColor[0],
+                                                      fun: () =>
+                                                          navigateToDetailAnimation(
+                                                              "b",
+                                                              iotViewModel),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Container(
+                                              width: 150,
+                                              height: 150,
+                                              child: Stack(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            20.0),
+                                                    child: AnimatedContainer(
+                                                      duration:
+                                                          Duration(seconds: 0),
+                                                      width: 130,
+                                                      height: 130,
+                                                      decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                              color: (isClicked ==
+                                                                      true)
+                                                                  ? Color(
+                                                                      0xff65CBE3)
+                                                                  : Color(
+                                                                      0x29000000),
+                                                              offset:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? Offset(
+                                                                          0, 0)
+                                                                      : Offset(
+                                                                          0,
+                                                                          18),
+                                                              /* (condition<t/f>) ? {true statements} : {false statements} */
+                                                              blurRadius: /*Icon pressed effect*/
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 100
+                                                                      : 27,
+                                                              spreadRadius:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 350
+                                                                      : 0)
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                          500,
+                                                        ),
+                                                      ),
+                                                      child: Image.asset(
+                                                        "assets/images/water.png", /*Icon*/
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  GestureDetector(
+                                                    /*Screen animation with colour changing*/
+                                                    onTap: yellowAnim == true ||
+                                                            whiteAnim == true ||
+                                                            orangeAnim == true
+                                                        ? null
+                                                        : () {
+                                                            setState(() {
+                                                              blueAnim = true;
+                                                              // screenBackground = blue;
+                                                              screenBackground =
+                                                                  blueGradient;
+                                                              isClicked = false;
+                                                              Timer(
+                                                                  Duration(
+                                                                      seconds:
+                                                                          3),
+                                                                  () {
+                                                                setState(() {
+                                                                  screenBackground =
+                                                                      normalGradient;
+                                                                  isClicked =
+                                                                      false;
+                                                                });
+                                                              });
+                                                              // Set a timer of 3 secs..... set isClicked back to false
+                                                            });
+                                                          },
+                                                    child: FragnanceRipple(
+                                                      color: blueColor[0],
+                                                      fun: () =>
+                                                          navigateToDetailAnimation(
+                                                              "c",
+                                                              iotViewModel),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 150,
+                                              height: 150,
+                                              child: Stack(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            20.0),
+                                                    child: AnimatedContainer(
+                                                      duration:
+                                                          Duration(seconds: 0),
+                                                      width: 130,
+                                                      height: 130,
+                                                      decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                              color: (isClicked ==
+                                                                      true)
+                                                                  ? Color(
+                                                                      0xffFFBBBB)
+                                                                  : Color(
+                                                                      0x29000000),
+                                                              offset:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? Offset(
+                                                                          0, 0)
+                                                                      : Offset(
+                                                                          0,
+                                                                          18),
+
+                                                              /* (condition<t/f>) ? {true statements} : {false statements} */
+                                                              blurRadius: /*Icon pressed effect*/
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 100
+                                                                      : 27,
+                                                              spreadRadius:
+                                                                  (isClicked ==
+                                                                          true)
+                                                                      ? 350
+                                                                      : 0)
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                          500,
+                                                        ),
+                                                      ),
+                                                      child: Image.asset(
+                                                        "assets/images/flower.png", /*Icon*/
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  GestureDetector(
+                                                    /*Screen animation with colour changing*/
+                                                    onTap: yellowAnim == true ||
+                                                            blueAnim == true ||
+                                                            orangeAnim == true
+                                                        ? null
+                                                        : () {
+                                                            setState(() {
+                                                              whiteAnim = true;
+                                                              //screenBackground = orange;
+                                                              screenBackground =
+                                                                  roseGradient;
+                                                              isClicked = false;
+                                                              Timer(
+                                                                  Duration(
+                                                                      seconds:
+                                                                          3),
+                                                                  () {
+                                                                setState(() {
+                                                                  screenBackground =
+                                                                      normalGradient;
+                                                                  isClicked =
+                                                                      false;
+                                                                });
+                                                              });
+                                                              //set timer of 3 secs
+                                                              // 5 Mins
+                                                            });
+                                                          },
+                                                    child: FragnanceRipple(
+                                                      color: roseGradient[2],
+                                                      fun: () =>
+                                                          navigateToDetailAnimation(
+                                                              "d",
+                                                              iotViewModel),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        verticalSizedBoxTwenty(),
+                                        Wrap(
+                                          children: [
+                                            verticalSizedBoxTwenty(),
+                                            // Not just FRAGNANCE FRESH
+                                            Center(
+                                              child: Text(
+                                                  "Not just FRAGNANCE FRESH",
+                                                  style: GoogleFonts.roboto(
+                                                    textStyle: TextStyle(
+                                                        color: const Color(
+                                                            0xff303030),
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        fontFamily: "Roboto",
+                                                        fontStyle:
+                                                            FontStyle.normal,
+                                                        fontSize: 18.0),
+                                                  ),
+                                                  textAlign: TextAlign.center),
+                                            ),
+                                            verticalSizedBoxTwenty(),
+                                            Center(
+                                              child: // but now get  your laundry
+                                                  Text(
+                                                      "but now get your \n laundry",
+                                                      style: GoogleFonts.roboto(
+                                                        textStyle: TextStyle(
+                                                            color: const Color(
+                                                                0xff959595),
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                "Roboto",
+                                                            fontStyle: FontStyle
+                                                                .normal,
+                                                            fontSize: 30.0),
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center),
+                                            ),
+                                            verticalSizedBox(),
+                                            Center(
+                                              child: // refreshed
+                                                  Text("refreshed",
+                                                      style: GoogleFonts.roboto(
+                                                        textStyle: TextStyle(
+                                                            color: const Color(
+                                                                0xff171717),
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                "Roboto",
+                                                            fontStyle: FontStyle
+                                                                .normal,
+                                                            fontSize: 53.5),
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center),
+                                            ),
+                                            verticalSizedBox(),
+                                            Center(
+                                              child: // with steam !
+                                                  Text("with steam !",
+                                                      style: GoogleFonts.roboto(
+                                                        textStyle: TextStyle(
+                                                            color: const Color(
+                                                                0xff959595),
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                "Roboto",
+                                                            fontStyle: FontStyle
+                                                                .normal,
+                                                            fontSize: 30.0),
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center),
+                                            ),
+                                            verticalSizedBoxTwenty(),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
